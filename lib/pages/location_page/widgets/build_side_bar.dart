@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-buildSideBar() {
+buildSideBar(BuildContext context) {
   return Container(
     width: 50,
     height: 800,
-    color: Colors.black,
+    color: Theme.of(context).cardColor,
     child: Padding(
       padding: const EdgeInsets.all(8.0),
       child: Center(

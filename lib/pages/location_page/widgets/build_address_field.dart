@@ -11,7 +11,7 @@ buildAddressTextField({
   return Container(
     height: 60,
     decoration: BoxDecoration(
-      color: Theme.of(context).accentColor,
+      color: Theme.of(context).cardColor,
       borderRadius: BorderRadius.circular(10),
     ),
     child: Padding(

@@ -85,7 +85,7 @@ class _HomePageState extends State<HomePage> {
                             color: Color(0xFF1194AA),
                           ),
                         ),
-                        SizedBox(height: 8),
+                        SizedBox(height: 16),
                         buildHealthRecommendationWidget(widget.aqi),
                       ],
                     ),

@@ -51,7 +51,7 @@ class LocationPage extends StatelessWidget {
                 ),
               ),
             ),
-            buildSideBar(),
+            buildSideBar(context),
           ],
         ),
       ),
