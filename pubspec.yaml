@@ -24,6 +24,7 @@ dependencies:
   google_fonts: ^1.1.1
   flutter_spinkit: "^4.1.2"
   flutter_screenutil: ^4.0.2+5
+  marquee: ^1.6.1
 
 dev_dependencies:
   flutter_test:

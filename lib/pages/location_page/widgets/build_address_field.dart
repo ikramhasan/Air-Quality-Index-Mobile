@@ -53,17 +53,20 @@ buildAddressTextField({
             },
             child: Container(
               height: 50.h,
-              width: 74.w,
+              //width: 74.w,
               decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10),
+                borderRadius: BorderRadius.circular(10.h),
                 color: Theme.of(context).canvasColor,
               ),
               child: Center(
-                child: Text(
-                  'GO',
-                  style: GoogleFonts.faunaOne(
-                    color: Colors.black,
-                    fontWeight: FontWeight.bold,
+                child: Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 26.w),
+                  child: Text(
+                    'GO',
+                    style: GoogleFonts.faunaOne(
+                      color: Colors.black,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
                 ),
               ),

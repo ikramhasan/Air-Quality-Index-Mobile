@@ -15,7 +15,6 @@ class Repository {
     var response = await http.get(url);
     try {
       var aqi = airQualityIndexFromJson(response.body);
-      print(aqi.data.city.name);
       return aqi;
     } catch (e) {
       var error = errorFromJson(response.body);

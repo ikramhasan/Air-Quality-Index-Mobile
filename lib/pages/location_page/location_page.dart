@@ -12,9 +12,6 @@ class LocationPage extends StatelessWidget {
   Widget build(BuildContext context) {
     TextEditingController controller = TextEditingController();
 
-    print(MediaQuery.of(context).size.height);
-    print(MediaQuery.of(context).size.width);
-
     return Scaffold(
       key: _scaffoldKey,
       backgroundColor: Theme.of(context).canvasColor,

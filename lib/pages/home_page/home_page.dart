@@ -8,6 +8,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:marquee/marquee.dart';
 import 'widgets/build_circle_gauge.dart';
 import 'widgets/build_health_recommendation.dart';
 
@@ -36,8 +37,8 @@ class _HomePageState extends State<HomePage> {
                 physics: BouncingScrollPhysics(),
                 child: SafeArea(
                   child: Padding(
-                    padding: EdgeInsets.symmetric(
-                        horizontal: 16.w, vertical: 34.h),
+                    padding:
+                        EdgeInsets.symmetric(horizontal: 16.w, vertical: 34.h),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.start,
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -50,11 +51,19 @@ class _HomePageState extends State<HomePage> {
                               size: 18.h,
                             ),
                             SizedBox(width: 8.w),
-                            Text(
-                              widget.aqi.data.city.name,
-                              style: GoogleFonts.faunaOne(
-                                fontSize: 18.h,
-                                fontWeight: FontWeight.bold,
+                            Container(
+                              height: 18.h,
+                              width: 325.w,
+                              child: Marquee(
+                                text: widget.aqi.data.city.name,
+                                style: GoogleFonts.faunaOne(
+                                  fontSize: 18.h,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                                scrollAxis: Axis.horizontal,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                blankSpace: 100.0,
+                                velocity: 100.0,
                               ),
                             ),
                           ],

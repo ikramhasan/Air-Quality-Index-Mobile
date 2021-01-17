@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return ScreenUtilInit(
       designSize: Size(392.72727272727275, 737.4545454545455),
-      allowFontScaling: false,
+      allowFontScaling: true,
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'Air Quality Index',

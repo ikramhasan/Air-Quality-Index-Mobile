@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.ikramhasan.aqi">
    <application
-        android:label="aqi"
+        android:label="Air Quality Index"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"
