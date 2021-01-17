@@ -3,6 +3,7 @@ import 'package:aqi/repositories/location_service.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:location/location.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 buildCurrentLocationButton(BuildContext context) {
   return InkWell(
@@ -21,7 +22,7 @@ buildCurrentLocationButton(BuildContext context) {
     },
     borderRadius: BorderRadius.circular(10),
     child: Ink(
-      height: 60,
+      height: 60.h,
       decoration: BoxDecoration(
         color: Theme.of(context).cardColor,
         borderRadius: BorderRadius.circular(10),
@@ -30,15 +31,15 @@ buildCurrentLocationButton(BuildContext context) {
         child: Row(
           children: [
             Padding(
-              padding: const EdgeInsets.all(10.0),
+              padding:  EdgeInsets.all(10.h),
               child: Icon(Icons.place),
             ),
-            SizedBox(width: 30),
+            SizedBox(width: 30.w),
             Text(
               'Get Current Location',
               style: GoogleFonts.faunaOne(
                 fontWeight: FontWeight.bold,
-                fontSize: 16,
+                fontSize: 16.h,
               ),
             ),
           ],

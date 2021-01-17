@@ -3,6 +3,7 @@ import 'package:aqi/pages/location_page/widgets/build_current_location_button.da
 import 'package:aqi/pages/location_page/widgets/build_side_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class LocationPage extends StatelessWidget {
   final _scaffoldKey = GlobalKey<ScaffoldState>();
@@ -10,6 +11,9 @@ class LocationPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     TextEditingController controller = TextEditingController();
+
+    print(MediaQuery.of(context).size.height);
+    print(MediaQuery.of(context).size.width);
 
     return Scaffold(
       key: _scaffoldKey,
@@ -19,30 +23,30 @@ class LocationPage extends StatelessWidget {
         child: Row(
           children: [
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 34),
+              padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 34.h),
               child: Container(
-                width: 310,
+                width: 310.w,
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    SizedBox(height: 60),
+                    SizedBox(height: 60.h),
                     Image.asset('assets/images/pollution.png'),
-                    SizedBox(height: 60),
+                    SizedBox(height: 60.h),
                     Text(
                       'Where are you? ',
                       style: GoogleFonts.faunaOne(
                           color: Colors.black, fontSize: 24),
                     ),
-                    SizedBox(height: 16),
+                    SizedBox(height: 16.h),
                     buildCurrentLocationButton(context),
-                    SizedBox(height: 16),
+                    SizedBox(height: 16.h),
                     buildAddressTextField(
                       context: context,
                       controller: controller,
                       scaffoldKey: _scaffoldKey,
                     ),
-                    SizedBox(height: 16),
+                    SizedBox(height: 16.h),
                     Text(
                       'To get the most accurate reading of your current air quality index, we recommend entering your exact location.',
                       style: GoogleFonts.faunaOne(color: Colors.grey),

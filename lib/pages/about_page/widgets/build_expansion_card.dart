@@ -1,6 +1,7 @@
 import 'package:expansion_card/expansion_card.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 buildExpansionCard(
     {String title,
@@ -8,10 +9,10 @@ buildExpansionCard(
     String assetLocation,
     BuildContext context}) {
   return ExpansionCard(
-    borderRadius: 16,
+    borderRadius: 16.h,
     backgroundColor: Theme.of(context).primaryColor,
     background: Container(
-      height: 225,
+      height: 225.h,
       color: Theme.of(context).primaryColor,
     ),
     title: Text(
@@ -20,7 +21,7 @@ buildExpansionCard(
     ),
     children: [
       Padding(
-        padding: const EdgeInsets.all(16.0),
+        padding: EdgeInsets.all(16.h),
         child: Text(
           description,
           style: GoogleFonts.faunaOne(),
@@ -29,7 +30,7 @@ buildExpansionCard(
       assetLocation == null
           ? Container()
           : Padding(
-              padding: const EdgeInsets.fromLTRB(16, 0, 16, 16),
+              padding: EdgeInsets.fromLTRB(16.h, 0, 16.h, 16.h),
               child: Image.asset(assetLocation),
             ),
     ],

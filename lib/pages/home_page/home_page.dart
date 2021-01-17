@@ -7,7 +7,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
-
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'widgets/build_circle_gauge.dart';
 import 'widgets/build_health_recommendation.dart';
 
@@ -36,8 +36,8 @@ class _HomePageState extends State<HomePage> {
                 physics: BouncingScrollPhysics(),
                 child: SafeArea(
                   child: Padding(
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: 16, vertical: 34),
+                    padding: EdgeInsets.symmetric(
+                        horizontal: 16.w, vertical: 34.h),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.start,
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -47,26 +47,26 @@ class _HomePageState extends State<HomePage> {
                           children: [
                             FaIcon(
                               FontAwesomeIcons.map,
-                              size: 18,
+                              size: 18.h,
                             ),
-                            SizedBox(width: 8),
+                            SizedBox(width: 8.w),
                             Text(
                               widget.aqi.data.city.name,
                               style: GoogleFonts.faunaOne(
-                                fontSize: 18,
+                                fontSize: 18.h,
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
                           ],
                         ),
-                        SizedBox(height: 8),
+                        SizedBox(height: 8.h),
                         Text(
                           DateFormat('MMM d, ' 'h:mm a')
                               .format(widget.aqi.data.time.iso),
                           style: GoogleFonts.faunaOne(
-                              color: Colors.grey, fontSize: 12),
+                              color: Colors.grey, fontSize: 12.h),
                         ),
-                        SizedBox(height: 60),
+                        SizedBox(height: 60.h),
                         Center(
                           child: buildCircleGauge(
                             widget.aqi,
@@ -82,21 +82,21 @@ class _HomePageState extends State<HomePage> {
                             getData(widget.aqi.data.aqi).healthImplecations,
                           ),
                           subtitle: Padding(
-                            padding: const EdgeInsets.only(top: 8.0),
+                            padding: EdgeInsets.only(top: 8.h),
                             child: Text(getData(widget.aqi.data.aqi)
                                 .cautionaryStatement),
                           ),
                         ),
-                        SizedBox(height: 16),
+                        SizedBox(height: 16.h),
                         Text(
                           'Health Recommendations',
                           style: GoogleFonts.faunaOne(
-                            fontSize: 18,
+                            fontSize: 18.h,
                             fontWeight: FontWeight.bold,
                             color: Color(0xFF1194AA),
                           ),
                         ),
-                        SizedBox(height: 16),
+                        SizedBox(height: 16.h),
                         buildHealthRecommendationWidget(widget.aqi),
                       ],
                     ),

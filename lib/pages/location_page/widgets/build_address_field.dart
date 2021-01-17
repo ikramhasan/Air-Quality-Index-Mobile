@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../tab_page/tab_page.dart';
 
 buildAddressTextField({
@@ -9,27 +9,27 @@ buildAddressTextField({
   GlobalKey<ScaffoldState> scaffoldKey,
 }) {
   return Container(
-    height: 60,
+    height: 60.h,
     decoration: BoxDecoration(
       color: Theme.of(context).cardColor,
       borderRadius: BorderRadius.circular(10),
     ),
     child: Padding(
-      padding: const EdgeInsets.all(8.0),
+      padding: EdgeInsets.all(8.h),
       child: Row(
         children: [
           Container(
-            width: 210,
+            width: 210.w,
             child: TextField(
               controller: controller,
               style: GoogleFonts.faunaOne(),
               decoration: InputDecoration(
                   hintText: 'Enter Address',
-                  contentPadding: EdgeInsets.all(8),
+                  contentPadding: EdgeInsets.all(8.h),
                   hintStyle: GoogleFonts.faunaOne()),
             ),
           ),
-          SizedBox(width: 10),
+          SizedBox(width: 10.w),
           InkWell(
             onTap: () {
               if (controller.text.length < 2 ||
@@ -52,8 +52,8 @@ buildAddressTextField({
               }
             },
             child: Container(
-              height: 50,
-              width: 70,
+              height: 50.h,
+              width: 74.w,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10),
                 color: Theme.of(context).canvasColor,

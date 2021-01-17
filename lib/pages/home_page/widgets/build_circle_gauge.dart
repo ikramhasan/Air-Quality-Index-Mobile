@@ -4,6 +4,7 @@ import 'package:aqi/pages/home_page/widgets/get_data.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:sleek_circular_slider/sleek_circular_slider.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 buildCircleGauge(AirQualityIndex aqi, BuildContext context) {
     String subText = getData(aqi.data.aqi).pollutionLevel;
@@ -24,7 +25,7 @@ buildCircleGauge(AirQualityIndex aqi, BuildContext context) {
           ),
           mainLabelStyle: GoogleFonts.faunaOne(
             fontWeight: FontWeight.bold,
-            fontSize: 45,
+            fontSize: 45.h,
             color: getData(aqi.data.aqi).color,
           ),
           modifier: (percentage) {
@@ -45,7 +46,7 @@ buildCircleGauge(AirQualityIndex aqi, BuildContext context) {
             data[5].color,
           ],
         ),
-        size: 250,
+        size: 250.h,
         customWidths: CustomSliderWidths(
           progressBarWidth: 10,
         ),

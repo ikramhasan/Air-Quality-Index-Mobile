@@ -3,6 +3,7 @@ import 'package:aqi/pages/home_page/widgets/get_data.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 buildHealthRecommendationWidget(AirQualityIndex aqi) {
     return ListView.builder(
@@ -12,17 +13,17 @@ buildHealthRecommendationWidget(AirQualityIndex aqi) {
       itemBuilder: (context, i) {
         var recommendations = getData(aqi.data.aqi).recommendations;
         return Container(
-          height: 60,
+          height: 60.h,
           decoration: BoxDecoration(
             color: Theme.of(context).primaryColor,
             borderRadius: BorderRadius.only(
-              topLeft: i == 0 ? Radius.circular(16) : Radius.circular(0),
-              topRight: i == 0 ? Radius.circular(16) : Radius.circular(0),
+              topLeft: i == 0 ? Radius.circular(16.h) : Radius.circular(0),
+              topRight: i == 0 ? Radius.circular(16.h) : Radius.circular(0),
               bottomLeft: i == recommendations.length - 1
-                  ? Radius.circular(16)
+                  ? Radius.circular(16.h)
                   : Radius.circular(0),
               bottomRight: i == recommendations.length - 1
-                  ? Radius.circular(16)
+                  ? Radius.circular(16.h)
                   : Radius.circular(0),
             ),
           ),
