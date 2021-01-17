@@ -1,4 +1,4 @@
-import 'package:aqi/pages/location_page.dart';
+import 'package:aqi/pages/location_page/location_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {

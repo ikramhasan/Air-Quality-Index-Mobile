@@ -1,4 +1,4 @@
-import 'package:aqi/pages/location_page.dart';
+import 'package:aqi/pages/location_page/location_page.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:persistent_bottom_nav_bar/persistent-tab-view.dart';

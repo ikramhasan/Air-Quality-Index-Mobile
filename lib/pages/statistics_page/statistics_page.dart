@@ -1,10 +1,8 @@
-import 'package:aqi/data/data.dart';
 import 'package:aqi/models/air_quality_index.dart';
+import 'package:aqi/pages/statistics_page/widgets/build_chart.dart';
 import 'package:aqi/pages/widgets/back_button.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:intl/intl.dart';
-import 'package:syncfusion_flutter_charts/charts.dart';
 
 class StatisticsPage extends StatelessWidget {
   final AirQualityIndex aqi;
@@ -12,25 +10,6 @@ class StatisticsPage extends StatelessWidget {
   const StatisticsPage({
     this.aqi,
   });
-
-  buildChart({String text, List<O3> list, String labelFormat}) {
-    return SfCartesianChart(
-      title: ChartTitle(text: text),
-      primaryXAxis: NumericAxis(
-          interval: 1,
-          majorGridLines: MajorGridLines(width: 0),
-          labelFormat:
-              '{value} \n${DateFormat('MMM').format(aqi.data.time.iso)}',
-          edgeLabelPlacement: EdgeLabelPlacement.shift),
-      primaryYAxis: NumericAxis(
-        labelFormat: labelFormat,
-        axisLine: AxisLine(width: 0),
-        majorTickLines: MajorTickLines(size: 0),
-      ),
-      series: getSplieAreaSeries(aqi, list),
-      tooltipBehavior: TooltipBehavior(enable: true),
-    );
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -59,21 +38,25 @@ class StatisticsPage extends StatelessWidget {
                     text: 'Ozone',
                     list: aqi.data.forecast.daily.o3,
                     labelFormat: '{value} ppb',
+                    aqi: aqi,
                   ),
                   SizedBox(height: 8),
                   buildChart(
                       text: 'PM10',
                       list: aqi.data.forecast.daily.pm10,
+                      aqi: aqi,
                       labelFormat: '{value} \nug/m3'),
                   SizedBox(height: 8),
                   buildChart(
                       text: 'PM25',
                       list: aqi.data.forecast.daily.pm25,
+                      aqi: aqi,
                       labelFormat: '{value} \nug/m3'),
                   SizedBox(height: 8),
                   buildChart(
                       text: 'UVI',
                       list: aqi.data.forecast.daily.uvi,
+                      aqi: aqi,
                       labelFormat: '{value} \nindex'),
                   SizedBox(height: 8),
                 ],
