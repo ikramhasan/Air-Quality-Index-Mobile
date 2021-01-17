@@ -1,8 +1,10 @@
 import 'package:aqi/models/air_quality_index.dart';
 import 'package:aqi/pages/home_page/widgets/get_data.dart';
+import 'package:aqi/pages/home_page/widgets/loading.dart';
 import 'package:aqi/pages/widgets/back_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
 
@@ -27,7 +29,7 @@ class _HomePageState extends State<HomePage> {
       color: Theme.of(context).scaffoldBackgroundColor,
       child: widget.aqi.data == null
           ? Center(
-              child: CircularProgressIndicator(),
+              child: loadingWidget(),
             )
           : Scrollbar(
               child: SingleChildScrollView(
@@ -41,16 +43,25 @@ class _HomePageState extends State<HomePage> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         ArrowLeftButton(),
-                        Text(
-                          widget.aqi.data.city.name,
-                          style: GoogleFonts.faunaOne(
-                            fontSize: 18,
-                            fontWeight: FontWeight.bold,
-                          ),
+                        Row(
+                          children: [
+                            FaIcon(
+                              FontAwesomeIcons.map,
+                              size: 18,
+                            ),
+                            SizedBox(width: 8),
+                            Text(
+                              widget.aqi.data.city.name,
+                              style: GoogleFonts.faunaOne(
+                                fontSize: 18,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ],
                         ),
                         SizedBox(height: 8),
                         Text(
-                          DateFormat('EEE, MMM d, ' 'yyyy - h:mm a')
+                          DateFormat('MMM d, ' 'h:mm a')
                               .format(widget.aqi.data.time.iso),
                           style: GoogleFonts.faunaOne(
                               color: Colors.grey, fontSize: 12),
