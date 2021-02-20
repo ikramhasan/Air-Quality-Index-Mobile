@@ -31,8 +31,11 @@ buildCurrentLocationButton(BuildContext context) {
         child: Row(
           children: [
             Padding(
-              padding:  EdgeInsets.all(10.h),
-              child: Icon(Icons.place),
+              padding: EdgeInsets.all(10.h),
+              child: Icon(
+                Icons.place,
+                color: Colors.white,
+              ),
             ),
             SizedBox(width: 30.w),
             Text(
@@ -40,6 +43,7 @@ buildCurrentLocationButton(BuildContext context) {
               style: GoogleFonts.faunaOne(
                 fontWeight: FontWeight.bold,
                 fontSize: 16.h,
+                color: Colors.white,
               ),
             ),
           ],

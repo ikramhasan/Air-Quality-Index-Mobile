@@ -16,6 +16,7 @@ buildSideBar(BuildContext context) {
             style: GoogleFonts.faunaOne(
               fontSize: 18.h,
               fontWeight: FontWeight.bold,
+              color: Colors.white,
             ),
           ),
         ),

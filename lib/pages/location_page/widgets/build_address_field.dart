@@ -25,9 +25,12 @@ buildAddressTextField({
                 controller: controller,
                 style: GoogleFonts.faunaOne(),
                 decoration: InputDecoration(
-                    hintText: 'Enter Address',
-                    contentPadding: EdgeInsets.all(8.h),
-                    hintStyle: GoogleFonts.faunaOne()),
+                  hintText: 'Enter Address',
+                  contentPadding: EdgeInsets.all(8.h),
+                  hintStyle: GoogleFonts.faunaOne(
+                    color: Colors.grey,
+                  ),
+                ),
               ),
             ),
           ),
@@ -41,7 +44,7 @@ buildAddressTextField({
                         .hasMatch(controller.text)) {
                   ScaffoldMessenger.of(context).showSnackBar(
                     SnackBar(
-                      content: Text('Enter proper location'),
+                      content: Text('Enter a proper location'),
                     ),
                   );
                 } else {
