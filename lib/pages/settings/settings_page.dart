@@ -1,9 +1,10 @@
+import 'package:aqi/pages/settings/widgets/night_mode_widget.dart';
+import 'package:aqi/pages/settings/widgets/settings_button.dart';
 import 'package:aqi/pages/widgets/k_back_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:settings_ui/settings_ui.dart';
 
 class SettingsPage extends StatelessWidget {
   @override
@@ -27,41 +28,47 @@ class SettingsPage extends StatelessWidget {
             vertical: 16.h,
           ),
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              SettingsSection(
-                title: 'Common',
-                tiles: [
-                  SettingsTile(
-                    title: 'Language',
-                    subtitle: 'English',
-                    leading: Icon(Icons.language),
-                    onPressed: (BuildContext context) {},
+              Padding(
+                padding: EdgeInsets.only(left: 16.w),
+                child: Text(
+                  'Common',
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    color: Colors.blue,
                   ),
-                  SettingsTile.switchTile(
-                    title: 'Dark mode',
-                    leading: FaIcon(FontAwesomeIcons.adjust),
-                    switchValue: true,
-                    onToggle: (bool value) {},
-                  ),
-                ],
+                ),
               ),
+              settingsButton(
+                title: 'Language',
+                leading: FaIcon(FontAwesomeIcons.language),
+                onTap: () {},
+              ),
+              NigthModeWidget(),
               SizedBox(height: 16.h),
-              SettingsSection(
-                title: 'Misc',
-                tiles: [
-                  SettingsTile(
-                    title: 'About',
-                    leading: FaIcon(FontAwesomeIcons.fileAlt),
-                    trailing: FaIcon(FontAwesomeIcons.angleRight),
-                    onPressed: (BuildContext context) {},
+              Padding(
+                padding: EdgeInsets.only(left: 16.w),
+                child: Text(
+                  'Misc',
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    color: Colors.blue,
                   ),
-                  SettingsTile(
-                    title: 'Licenses',
-                    leading: FaIcon(FontAwesomeIcons.scroll),
-                    trailing: FaIcon(FontAwesomeIcons.angleRight),
-                    onPressed: (BuildContext context) {},
-                  ),
-                ],
+                ),
+              ),
+              settingsButton(
+                title: 'About',
+                leading: FaIcon(FontAwesomeIcons.fileAlt),
+                trailing: FaIcon(FontAwesomeIcons.angleRight),
+                onTap: () {},
+              ),
+              settingsButton(
+                title: 'Licenses',
+                leading: FaIcon(FontAwesomeIcons.scroll),
+                trailing: FaIcon(FontAwesomeIcons.angleRight),
+                onTap: () {},
               ),
             ],
           ),
