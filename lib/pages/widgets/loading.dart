@@ -4,7 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 loadingWidget() {
   return SpinKitCubeGrid(
-    color: Colors.white,
+    color: Colors.blue,
     size: 50.h,
   );
 }
