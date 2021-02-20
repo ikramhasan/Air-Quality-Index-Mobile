@@ -36,7 +36,7 @@ buildHealthRecommendationWidget(AirQualityIndex aqi) {
                 ),
                 title: Text(
                   recommendations[i].text,
-                  style: GoogleFonts.faunaOne(),
+                  style: Theme.of(context).textTheme.bodyText1,
                 ),
               ),
               i < recommendations.length - 1 ? Divider(height: 1) : Container(),

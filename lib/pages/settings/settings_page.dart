@@ -4,7 +4,6 @@ import 'package:aqi/pages/widgets/k_back_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class SettingsPage extends StatelessWidget {
   @override
@@ -15,10 +14,7 @@ class SettingsPage extends StatelessWidget {
         leading: kBackButton(context),
         title: Text(
           'Settings',
-          style: GoogleFonts.faunaOne(
-            fontSize: 18.h,
-            fontWeight: FontWeight.bold,
-          ),
+          style: Theme.of(context).appBarTheme.textTheme.headline1,
         ),
       ),
       body: SafeArea(

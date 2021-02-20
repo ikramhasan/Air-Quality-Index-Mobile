@@ -28,28 +28,28 @@ List<PersistentBottomNavBarItem> navBarsItems(context) {
       icon: FaIcon(FontAwesomeIcons.home),
       title: ("Home"),
       activeColor: Colors.blue,
-      inactiveColor: Colors.white70,
+      inactiveColor: Theme.of(context).accentColor,
     ),
     PersistentBottomNavBarItem(
       icon: FaIcon(FontAwesomeIcons.thermometerThreeQuarters),
       title: ("Statistics"),
       textStyle: GoogleFonts.faunaOne(),
       activeColor: Colors.blue,
-      inactiveColor: Colors.white70,
+      inactiveColor: Theme.of(context).accentColor,
     ),
     PersistentBottomNavBarItem(
       icon: FaIcon(FontAwesomeIcons.infoCircle),
       title: ("About"),
       textStyle: GoogleFonts.faunaOne(),
       activeColor: Colors.blue,
-      inactiveColor: Colors.white70,
+      inactiveColor: Theme.of(context).accentColor,
     ),
     PersistentBottomNavBarItem(
       icon: FaIcon(FontAwesomeIcons.slidersH),
       title: ("Settings"),
       textStyle: GoogleFonts.faunaOne(),
       activeColor: Colors.blue,
-      inactiveColor: Colors.white70,
+      inactiveColor: Theme.of(context).accentColor,
     ),
   ];
 }

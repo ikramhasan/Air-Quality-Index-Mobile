@@ -38,11 +38,12 @@ An android fat application made using Flutter.
 - [x] Add health recommendations
 - [x] Add statistics chart
 - [x] Add about page
+- [x] Add persistant navbar
 - [x] Add expanded tiles
-- [ ] Add dynamic theming
+- [x] Add dynamic theming (persistant)
 - [ ] Implement caching of data (Offline functionality)
 - [ ] Implement better state management
-- [ ] Built the responsive site
+- [ ] Build the responsive site
 
 ## My Socials
 

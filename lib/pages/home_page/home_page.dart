@@ -31,10 +31,7 @@ class _HomePageState extends State<HomePage> {
         leading: kBackButton(context),
         title: Text(
           'Home',
-          style: GoogleFonts.faunaOne(
-            fontSize: 18.h,
-            fontWeight: FontWeight.bold,
-          ),
+          style: Theme.of(context).appBarTheme.textTheme.headline1,
         ),
       ),
       body: Container(
@@ -68,10 +65,7 @@ class _HomePageState extends State<HomePage> {
                                 width: 325.w,
                                 child: Marquee(
                                   text: widget.aqi.data.city.name,
-                                  style: GoogleFonts.faunaOne(
-                                    fontSize: 18.h,
-                                    fontWeight: FontWeight.bold,
-                                  ),
+                                  style: Theme.of(context).textTheme.headline6,
                                   scrollAxis: Axis.horizontal,
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   blankSpace: 100.0,
@@ -101,18 +95,14 @@ class _HomePageState extends State<HomePage> {
                             ),
                             title: Text(
                               getData(widget.aqi.data.aqi).healthImplecations,
-                              style: GoogleFonts.faunaOne(
-                                fontSize: 16,
-                              ),
+                              style: Theme.of(context).textTheme.bodyText1,
                             ),
                             subtitle: Padding(
                               padding: EdgeInsets.only(top: 8.h),
                               child: Text(
                                 getData(widget.aqi.data.aqi)
                                     .cautionaryStatement,
-                                style: GoogleFonts.faunaOne(
-                                  fontSize: 12,
-                                ),
+                                style: Theme.of(context).textTheme.subtitle1,
                               ),
                             ),
                           ),

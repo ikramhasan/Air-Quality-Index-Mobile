@@ -64,7 +64,8 @@ class _TabPageState extends State<TabPage> {
       screens: buildScreens(_aqi),
       items: navBarsItems(context),
       confineInSafeArea: true,
-      backgroundColor: Colors.grey[850],
+      backgroundColor:
+          Theme.of(context).bottomNavigationBarTheme.backgroundColor,
       handleAndroidBackButtonPress: true,
       stateManagement: true,
       padding: NavBarPadding.all(0),
