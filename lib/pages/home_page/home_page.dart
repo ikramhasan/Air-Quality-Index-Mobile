@@ -114,7 +114,7 @@ class _HomePageState extends State<HomePage> {
                             style: GoogleFonts.faunaOne(
                               fontSize: 18.h,
                               fontWeight: FontWeight.bold,
-                              color: Color(0xFF1194AA),
+                              color: Colors.blue,
                             ),
                           ),
                           SizedBox(height: 16.h),

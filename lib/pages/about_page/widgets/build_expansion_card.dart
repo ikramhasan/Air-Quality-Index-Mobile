@@ -9,7 +9,7 @@ buildExpansionCard(
     String assetLocation,
     BuildContext context}) {
   return ExpansionCard(
-    borderRadius: 16.h,
+    borderRadius: 3.h,
     backgroundColor: Theme.of(context).primaryColor,
     background: Container(
       height: 225.h,
