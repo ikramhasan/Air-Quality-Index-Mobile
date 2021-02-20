@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
         title: 'Air Quality Index',
         theme: ThemeData(
           brightness: Brightness.dark,
-          scaffoldBackgroundColor: Color(0xFF1F1F1F),
+          scaffoldBackgroundColor: Colors.grey[900],
           canvasColor: Color(0xFFFFFAF2),
           primaryColor: Color(0xFF282828),
           accentColor: Colors.white,

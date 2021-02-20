@@ -1,6 +1,6 @@
 import 'package:aqi/models/air_quality_index.dart';
 import 'package:aqi/pages/home_page/widgets/get_data.dart';
-import 'package:aqi/pages/home_page/widgets/loading.dart';
+import 'package:aqi/pages/statistics_page/widgets/loading.dart';
 import 'package:aqi/pages/widgets/back_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';

@@ -18,54 +18,57 @@ buildAddressTextField({
       padding: EdgeInsets.all(8.h),
       child: Row(
         children: [
-          Container(
-            width: 210.w,
-            child: TextField(
-              controller: controller,
-              style: GoogleFonts.faunaOne(),
-              decoration: InputDecoration(
-                  hintText: 'Enter Address',
-                  contentPadding: EdgeInsets.all(8.h),
-                  hintStyle: GoogleFonts.faunaOne()),
+          Flexible(
+            flex: 5,
+            child: Container(
+              child: TextField(
+                controller: controller,
+                style: GoogleFonts.faunaOne(),
+                decoration: InputDecoration(
+                    hintText: 'Enter Address',
+                    contentPadding: EdgeInsets.all(8.h),
+                    hintStyle: GoogleFonts.faunaOne()),
+              ),
             ),
           ),
-          SizedBox(width: 10.w),
-          InkWell(
-            onTap: () {
-              if (controller.text.length < 2 ||
-                  RegExp(r'[!@#<>?":_`~;[\]\\|=+)(*&^%0-9-]')
-                      .hasMatch(controller.text)) {
-                scaffoldKey.currentState.showSnackBar(
-                  SnackBar(
-                    content: Text('Enter proper location'),
-                  ),
-                );
-              } else {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => TabPage(
-                      placeName: controller.text,
+          Spacer(),
+          Flexible(
+            flex: 2,
+            child: InkWell(
+              onTap: () {
+                if (controller.text.length < 2 ||
+                    RegExp(r'[!@#<>?":_`~;[\]\\|=+)(*&^%0-9-]')
+                        .hasMatch(controller.text)) {
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    SnackBar(
+                      content: Text('Enter proper location'),
                     ),
-                  ),
-                );
-              }
-            },
-            child: Container(
-              height: 50.h,
-              //width: 74.w,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10.h),
-                color: Theme.of(context).canvasColor,
-              ),
-              child: Center(
-                child: Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 26.w),
-                  child: Text(
-                    'GO',
-                    style: GoogleFonts.faunaOne(
-                      color: Colors.black,
-                      fontWeight: FontWeight.bold,
+                  );
+                } else {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => TabPage(
+                        placeName: controller.text,
+                      ),
+                    ),
+                  );
+                }
+              },
+              child: Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10.h),
+                  color: Theme.of(context).canvasColor,
+                ),
+                child: Center(
+                  child: Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 26.w),
+                    child: Text(
+                      'GO',
+                      style: GoogleFonts.faunaOne(
+                        color: Colors.black,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
                   ),
                 ),

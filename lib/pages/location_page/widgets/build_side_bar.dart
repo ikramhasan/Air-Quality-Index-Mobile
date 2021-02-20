@@ -4,8 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 buildSideBar(BuildContext context) {
   return Container(
-    width: 50.7.w,
-    height: 800.h,
+    height: MediaQuery.of(context).size.height,
     color: Theme.of(context).cardColor,
     child: Padding(
       padding: EdgeInsets.all(8.h),
