@@ -22,6 +22,10 @@ var lightThemeData = ThemeData(
       fontSize: 16,
       color: Colors.black,
     ),
+    bodyText2: GoogleFonts.faunaOne(
+      fontSize: 14,
+      color: Colors.black,
+    ),
     subtitle1: GoogleFonts.faunaOne(
       fontSize: 12,
       color: Colors.grey[900],
@@ -60,6 +64,9 @@ var darkThemeData = ThemeData(
     ),
     bodyText1: GoogleFonts.faunaOne(
       fontSize: 16,
+      color: Colors.white,
+    ),bodyText2: GoogleFonts.faunaOne(
+      fontSize: 14,
       color: Colors.white,
     ),
     subtitle1: GoogleFonts.faunaOne(

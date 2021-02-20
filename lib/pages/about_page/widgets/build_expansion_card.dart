@@ -1,7 +1,7 @@
 import 'package:expansion_card/expansion_card.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 buildExpansionCard(
     {String title,
@@ -10,21 +10,32 @@ buildExpansionCard(
     BuildContext context}) {
   return ExpansionCard(
     borderRadius: 3.h,
+    trailing: FaIcon(
+      FontAwesomeIcons.angleDown,
+      size: 20,
+      color: Colors.grey,
+    ),
     backgroundColor: Theme.of(context).primaryColor,
     background: Container(
       height: 225.h,
-      color: Theme.of(context).primaryColor,
+      decoration: BoxDecoration(
+        color: Theme.of(context).primaryColor,
+        border: Border.all(
+          color: Colors.blue,
+          width: 2,
+        ),
+      ),
     ),
     title: Text(
       title,
-      style: GoogleFonts.faunaOne(),
+      style: Theme.of(context).textTheme.bodyText2,
     ),
     children: [
       Padding(
         padding: EdgeInsets.all(16.h),
         child: Text(
           description,
-          style: GoogleFonts.faunaOne(),
+          style: Theme.of(context).textTheme.bodyText2,
         ),
       ),
       assetLocation == null
