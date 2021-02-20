@@ -23,6 +23,9 @@ class MyApp extends StatelessWidget {
           accentColor: Colors.white,
           cardColor: Color(0xFF000000),
           primarySwatch: Colors.blue,
+          appBarTheme: AppBarTheme(
+            centerTitle: true,
+          ),
         ),
         home: LocationPage(),
       ),
