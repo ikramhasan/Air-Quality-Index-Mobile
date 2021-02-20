@@ -7,6 +7,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
+import 'package:easy_localization/easy_localization.dart';
 
 void main() async {
   // Initialize Get Storage
@@ -18,7 +19,17 @@ void main() async {
     yield LicenseEntryWithLineBreaks(['google_fonts'], license);
   });
 
-  runApp(MyApp());
+  runApp(
+    EasyLocalization(
+      supportedLocales: [
+        Locale('en', 'US'),
+        Locale('bn', 'BN'),
+      ],
+      path: 'assets/lang',
+      fallbackLocale: Locale('en', 'US'),
+      child: MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -28,6 +39,9 @@ class MyApp extends StatelessWidget {
       designSize: Size(392.72727272727275, 737.4545454545455),
       allowFontScaling: true,
       child: GetMaterialApp(
+        localizationsDelegates: context.localizationDelegates,
+        supportedLocales: context.supportedLocales,
+        locale: context.locale,
         debugShowCheckedModeBanner: false,
         title: 'Air Quality Index',
         theme: lightThemeData,

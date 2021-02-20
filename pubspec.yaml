@@ -18,7 +18,7 @@ dependencies:
   location: ^3.0.0
   sleek_circular_slider: ^1.2.0+web
   syncfusion_flutter_charts: ^18.4.34
-  intl: ^0.16.1
+  intl: ^0.17.0
   persistent_bottom_nav_bar: any
   expansion_card: ^0.1.0
   google_fonts: ^1.1.1
@@ -28,6 +28,7 @@ dependencies:
   easy_localization: ^2.3.3+1
   get_storage: ^1.4.0
   marquee: ^1.6.1
+  url_launcher: ^5.7.10
 
 dev_dependencies:
   flutter_test:
@@ -39,3 +40,5 @@ flutter:
   assets:
     - assets/
     - assets/images/
+    - assets/lang/en-US.json
+    - assets/lang/bn-BN.json

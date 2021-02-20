@@ -1,6 +1,8 @@
 import 'package:aqi/pages/settings/widgets/settings_button.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:easy_localization/easy_localization.dart';
+import 'package:get/get.dart';
 
 class LanguageWidget extends StatefulWidget {
   @override
@@ -8,9 +10,10 @@ class LanguageWidget extends StatefulWidget {
 }
 
 class _LanguageWidgetState extends State<LanguageWidget> {
-  String value = 'English';
   @override
   Widget build(BuildContext context) {
+    String value = context.locale.toString() == 'bn_BN' ? 'Bangla' : 'English';
+    print(context.locale.toString());
     return settingsButton(
       title: 'Language',
       leading: FaIcon(FontAwesomeIcons.language),
@@ -28,6 +31,16 @@ class _LanguageWidgetState extends State<LanguageWidget> {
             );
           }).toList(),
           onChanged: (newValue) {
+            if (newValue == 'English') {
+              context.locale = Locale('en', 'US');
+            } else {
+              context.locale = Locale('bn', 'BN');
+            }
+            Get.snackbar(
+              'Language Changed',
+              'Restart the app to see the change',
+              snackPosition: SnackPosition.BOTTOM,
+            );
             setState(() {
               value = newValue;
             });

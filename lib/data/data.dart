@@ -2,6 +2,7 @@ import 'package:aqi/models/air_quality_index.dart' as aqiPackage;
 import 'package:aqi/models/table.dart';
 import 'package:flutter/material.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
+import 'package:easy_localization/easy_localization.dart';
 
 List<Data> data = [
   Data(
@@ -106,7 +107,7 @@ List<Data> data = [
   Data(
     minAQI: 201,
     maxAQI: 300,
-    pollutionLevel: 'Very Unhealthy',
+    pollutionLevel: 'very_unhealthy'.tr(),
     healthImplecations:
         'Health warnings of emergency conditions. The entire population is more likely to be affected.',
     cautionaryStatement:
