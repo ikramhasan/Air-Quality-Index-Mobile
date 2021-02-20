@@ -1,6 +1,8 @@
 import 'package:aqi/models/air_quality_index.dart';
+import 'package:aqi/pages/error_page/unknow_station_error_page.dart';
 import 'package:aqi/repositories/repository.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:location/location.dart';
 import 'package:persistent_bottom_nav_bar/persistent-tab-view.dart';
 import 'package:aqi/pages/tab_page/widgets/tab_widgets.dart';
@@ -57,30 +59,32 @@ class _TabPageState extends State<TabPage> {
 
   @override
   Widget build(BuildContext context) {
-    return PersistentTabView(
-      context,
-      controller: _controller,
-      navBarHeight: 60,
-      screens: buildScreens(_aqi),
-      items: navBarsItems(context),
-      confineInSafeArea: true,
-      backgroundColor:
-          Theme.of(context).bottomNavigationBarTheme.backgroundColor,
-      handleAndroidBackButtonPress: true,
-      stateManagement: true,
-      padding: NavBarPadding.all(0),
-      popAllScreensOnTapOfSelectedTab: true,
-      popActionScreens: PopActionScreensType.all,
-      itemAnimationProperties: ItemAnimationProperties(
-        duration: Duration(milliseconds: 50),
-        curve: Curves.easeIn,
-      ),
-      screenTransitionAnimation: ScreenTransitionAnimation(
-        animateTabTransition: true,
-        curve: Curves.easeIn,
-        duration: Duration(milliseconds: 100),
-      ),
-      navBarStyle: NavBarStyle.style9,
-    );
+    return _aqi == null
+        ? UnknownStationErrorPage()
+        : PersistentTabView(
+            context,
+            controller: _controller,
+            navBarHeight: 60,
+            screens: buildScreens(_aqi),
+            items: navBarsItems(context),
+            confineInSafeArea: true,
+            backgroundColor:
+                Theme.of(context).bottomNavigationBarTheme.backgroundColor,
+            handleAndroidBackButtonPress: true,
+            stateManagement: true,
+            padding: NavBarPadding.all(0),
+            popAllScreensOnTapOfSelectedTab: true,
+            popActionScreens: PopActionScreensType.all,
+            itemAnimationProperties: ItemAnimationProperties(
+              duration: Duration(milliseconds: 50),
+              curve: Curves.easeIn,
+            ),
+            screenTransitionAnimation: ScreenTransitionAnimation(
+              animateTabTransition: true,
+              curve: Curves.easeIn,
+              duration: Duration(milliseconds: 100),
+            ),
+            navBarStyle: NavBarStyle.style9,
+          );
   }
 }
