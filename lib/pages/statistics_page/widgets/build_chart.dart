@@ -1,6 +1,5 @@
 import 'package:aqi/data/data.dart';
 import 'package:aqi/models/air_quality_index.dart';
-import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';

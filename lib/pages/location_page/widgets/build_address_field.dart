@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../tab_page/tab_page.dart';
+import 'package:get/get.dart';
 
 buildAddressTextField({
   BuildContext context,
@@ -42,10 +43,23 @@ buildAddressTextField({
                 if (controller.text.length < 2 ||
                     RegExp(r'[!@#<>?":_`~;[\]\\|=+)(*&^%0-9-]')
                         .hasMatch(controller.text)) {
-                  ScaffoldMessenger.of(context).showSnackBar(
-                    SnackBar(
-                      content: Text('Enter a proper location'),
+                  Get.snackbar(
+                    'Error',
+                    'Enter a proper address',
+                    snackPosition: SnackPosition.BOTTOM,
+                    titleText: Text(
+                      'Error',
+                      style: TextStyle(
+                        color: Colors.black,
+                      ),
                     ),
+                    messageText: Text(
+                      'Enter a proper address',
+                      style: TextStyle(
+                        color: Colors.black,
+                      ),
+                    ),
+                    margin: EdgeInsets.all(8),
                   );
                 } else {
                   Navigator.push(

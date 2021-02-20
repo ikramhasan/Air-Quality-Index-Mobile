@@ -2,7 +2,6 @@ import 'package:aqi/models/air_quality_index.dart';
 import 'package:aqi/pages/home_page/widgets/get_data.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 buildHealthRecommendationWidget(AirQualityIndex aqi) {

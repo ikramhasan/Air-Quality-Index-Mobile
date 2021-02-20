@@ -1,3 +1,4 @@
+import 'package:aqi/pages/settings/widgets/language_widget.dart';
 import 'package:aqi/pages/settings/widgets/night_mode_widget.dart';
 import 'package:aqi/pages/settings/widgets/settings_button.dart';
 import 'package:aqi/pages/widgets/k_back_button.dart';
@@ -37,11 +38,7 @@ class SettingsPage extends StatelessWidget {
                   ),
                 ),
               ),
-              settingsButton(
-                title: 'Language',
-                leading: FaIcon(FontAwesomeIcons.language),
-                onTap: () {},
-              ),
+              LanguageWidget(),
               Divider(),
               NigthModeWidget(),
               Divider(),
@@ -57,6 +54,13 @@ class SettingsPage extends StatelessWidget {
                 ),
               ),
               settingsButton(
+                title: 'Report a problem',
+                leading: FaIcon(FontAwesomeIcons.exclamationTriangle),
+                trailing: FaIcon(FontAwesomeIcons.angleRight),
+                onTap: () {},
+              ),
+              Divider(),
+              settingsButton(
                 title: 'About',
                 leading: FaIcon(FontAwesomeIcons.fileAlt),
                 trailing: FaIcon(FontAwesomeIcons.angleRight),
@@ -66,6 +70,13 @@ class SettingsPage extends StatelessWidget {
               settingsButton(
                 title: 'Licenses',
                 leading: FaIcon(FontAwesomeIcons.scroll),
+                trailing: FaIcon(FontAwesomeIcons.angleRight),
+                onTap: () {},
+              ),
+              Divider(),
+              settingsButton(
+                title: 'More apps',
+                leading: FaIcon(FontAwesomeIcons.googlePlay),
                 trailing: FaIcon(FontAwesomeIcons.angleRight),
                 onTap: () {},
               ),
