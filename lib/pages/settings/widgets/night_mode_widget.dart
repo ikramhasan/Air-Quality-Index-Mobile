@@ -8,7 +8,7 @@ class NigthModeWidget extends StatefulWidget {
 }
 
 class _NigthModeWidgetState extends State<NigthModeWidget> {
-  bool switchValue = true;
+  bool switchValue = false;
 
   @override
   Widget build(BuildContext context) {

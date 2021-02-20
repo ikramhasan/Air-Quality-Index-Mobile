@@ -24,12 +24,16 @@ buildAddressTextField({
             child: Container(
               child: TextField(
                 controller: controller,
-                style: GoogleFonts.faunaOne(),
+                style: GoogleFonts.faunaOne(
+                  color: Colors.white,
+                  fontSize: 14,
+                ),
                 decoration: InputDecoration(
                   hintText: 'Enter Address',
                   contentPadding: EdgeInsets.all(8.h),
                   hintStyle: GoogleFonts.faunaOne(
                     color: Colors.grey,
+                    fontSize: 14,
                   ),
                 ),
               ),

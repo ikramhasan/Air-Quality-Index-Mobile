@@ -2,6 +2,7 @@ import 'package:aqi/pages/settings/widgets/language_widget.dart';
 import 'package:aqi/pages/settings/widgets/night_mode_widget.dart';
 import 'package:aqi/pages/settings/widgets/settings_button.dart';
 import 'package:aqi/pages/widgets/k_back_button.dart';
+import 'package:aqi/utils/launch_url.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -57,14 +58,18 @@ class SettingsPage extends StatelessWidget {
                 title: 'Report a problem',
                 leading: FaIcon(FontAwesomeIcons.exclamationTriangle),
                 trailing: FaIcon(FontAwesomeIcons.angleRight),
-                onTap: () {},
+                onTap: () {
+                  sendMail();
+                },
               ),
               Divider(),
               settingsButton(
-                title: 'About',
+                title: 'About me',
                 leading: FaIcon(FontAwesomeIcons.fileAlt),
                 trailing: FaIcon(FontAwesomeIcons.angleRight),
-                onTap: () {},
+                onTap: () {
+                  launchURL('https://ikramhasan-portfolio.web.app/');
+                },
               ),
               Divider(),
               settingsButton(
@@ -78,7 +83,11 @@ class SettingsPage extends StatelessWidget {
                 title: 'More apps',
                 leading: FaIcon(FontAwesomeIcons.googlePlay),
                 trailing: FaIcon(FontAwesomeIcons.angleRight),
-                onTap: () {},
+                onTap: () {
+                  launchURL(
+                    'https://play.google.com/store/search?q=pub%3AIkram%20Hasan&c=apps',
+                  );
+                },
               ),
               Divider(),
             ],

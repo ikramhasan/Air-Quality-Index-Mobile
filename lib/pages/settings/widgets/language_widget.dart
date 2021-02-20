@@ -37,10 +37,9 @@ class _LanguageWidgetState extends State<LanguageWidget> {
               context.locale = Locale('bn', 'BN');
             }
             Get.snackbar(
-              'Language Changed',
-              'Restart the app to see the change',
-              snackPosition: SnackPosition.BOTTOM,
-            );
+                'Language Changed', 'Restart the app to see the change',
+                snackPosition: SnackPosition.BOTTOM,
+                margin: EdgeInsets.symmetric(horizontal: 16, vertical: 34),);
             setState(() {
               value = newValue;
             });
