@@ -45,6 +45,37 @@ An android fat application made using Flutter.
 - [ ] Implement better state management
 - [ ] Build the responsive site
 
+## Build Error
+You may get this error while building if you're using flutter beta channel or up (Flutter stable should work fine) This is because of the flutter_svg package that uses the nullOk parameter which has been removed from flutter beta. The error looks like this:
+
+```dart
+FAILURE: Build failed with an exception.
+
+* Where:
+Script 'D:\flutter\packages\flutter_tools\gradle\flutter.gradle' line: 991
+
+* What went wrong:
+Execution failed for task ':app:compileFlutterBuildDebug'.
+> Process 'command 'D:\flutter\bin\flutter.bat'' finished with non-zero exit value 1
+
+* Try:
+Run with --stacktrace option to get the stack trace. Run with --info or --debug option to get more log output. Run with --scan to get full insights.
+
+* Get more help at https://help.gradle.org
+
+BUILD FAILED in 15s
+Exception: Gradle task assembleDebug failed with exit code 1
+```
+
+To fix this error, change the version of flutter_svg in the pubspec.yaml file to : 
+```flutter_svg: ^0.20.0-nullsafety.3```
+
+After that, run these following commands:
+
+1. ```flutter clean```
+2. ```flutter pub get```
+3. ```flutter run```
+
 ## My Socials
 
 [<img src="https://raw.githubusercontent.com/paulrobertlloyd/socialmediaicons/main/facebook-48x48.png">](http://www.facebook.com/ihni7/)
