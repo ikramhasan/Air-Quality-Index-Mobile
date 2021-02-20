@@ -101,11 +101,19 @@ class _HomePageState extends State<HomePage> {
                             ),
                             title: Text(
                               getData(widget.aqi.data.aqi).healthImplecations,
+                              style: GoogleFonts.faunaOne(
+                                fontSize: 16,
+                              ),
                             ),
                             subtitle: Padding(
                               padding: EdgeInsets.only(top: 8.h),
-                              child: Text(getData(widget.aqi.data.aqi)
-                                  .cautionaryStatement),
+                              child: Text(
+                                getData(widget.aqi.data.aqi)
+                                    .cautionaryStatement,
+                                style: GoogleFonts.faunaOne(
+                                  fontSize: 12,
+                                ),
+                              ),
                             ),
                           ),
                           SizedBox(height: 16.h),
