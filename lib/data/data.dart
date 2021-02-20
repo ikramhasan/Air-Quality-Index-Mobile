@@ -3,7 +3,6 @@ import 'package:aqi/models/table.dart';
 import 'package:flutter/material.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
 
-
 List<Data> data = [
   Data(
     minAQI: 0,
@@ -178,8 +177,8 @@ List<ChartSeries<_SplineAreaData, double>> getSplieAreaSeries(
   return <ChartSeries<_SplineAreaData, double>>[
     SplineAreaSeries<_SplineAreaData, double>(
       dataSource: chartData,
-      color: const Color.fromRGBO(192, 108, 132, 0.6),
-      borderColor: const Color.fromRGBO(192, 108, 132, 1),
+      color: Colors.blue.withOpacity(0.2),
+      borderColor: Colors.blue,
       borderWidth: 2,
       name: aqi.data.city.name,
       xValueMapper: (_SplineAreaData pollution, _) => pollution.date,

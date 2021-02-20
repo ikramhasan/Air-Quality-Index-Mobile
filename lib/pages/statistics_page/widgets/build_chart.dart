@@ -7,11 +7,6 @@ import 'package:syncfusion_flutter_charts/charts.dart';
 buildChart(
     {String text, List<O3> list, String labelFormat, AirQualityIndex aqi}) {
   return SfCartesianChart(
-    plotAreaBorderColor: Colors.white,
-    palette: <Color>[
-      Colors.blue,
-      Colors.green,
-    ],
     title: ChartTitle(text: text),
     primaryXAxis: NumericAxis(
         interval: 1,
