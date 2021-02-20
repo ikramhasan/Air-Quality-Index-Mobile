@@ -60,6 +60,7 @@ class _TabPageState extends State<TabPage> {
     return PersistentTabView(
       context,
       controller: _controller,
+      navBarHeight: 60,
       screens: buildScreens(_aqi),
       items: navBarsItems(context),
       confineInSafeArea: true,
