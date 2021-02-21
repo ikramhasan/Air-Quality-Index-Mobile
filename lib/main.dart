@@ -27,7 +27,7 @@ void main() async {
       ],
       path: 'assets/lang',
       fallbackLocale: Locale('en', 'US'),
-      child: MyApp(),
+      child:  MyApp(),
     ),
   );
 }

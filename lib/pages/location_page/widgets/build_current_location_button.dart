@@ -1,6 +1,7 @@
 import 'package:aqi/pages/tab_page/tabs_page.dart';
 import 'package:aqi/repositories/location_service.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:location/location.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -29,7 +30,7 @@ buildCurrentLocationButton(BuildContext context) {
         borderRadius: BorderRadius.circular(10),
       ),
       child: ListTile(
-        contentPadding: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+        contentPadding: EdgeInsets.symmetric(horizontal: 16, vertical: 3),
         title: Text(
           'get_current_location'.tr(),
           style: GoogleFonts.faunaOne(
@@ -38,8 +39,8 @@ buildCurrentLocationButton(BuildContext context) {
             color: Colors.white,
           ),
         ),
-        leading: Icon(
-          Icons.place,
+        leading: FaIcon(
+          FontAwesomeIcons.mapMarkedAlt,
           color: Colors.white,
         ),
       ),

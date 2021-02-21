@@ -22,7 +22,7 @@ class _LanguageWidgetState extends State<LanguageWidget> {
         child: DropdownButton<String>(
           value: value,
           elevation: 16,
-          icon: Icon(Icons.arrow_drop_down_circle),
+          icon: FaIcon(FontAwesomeIcons.angleDown),
           isExpanded: true,
           items: <String>['English', 'বাংলা'].map((e) {
             return DropdownMenuItem(
@@ -40,7 +40,7 @@ class _LanguageWidgetState extends State<LanguageWidget> {
               'Language Changed',
               'Restart the app to see the change',
               snackPosition: SnackPosition.BOTTOM,
-              margin: EdgeInsets.symmetric(horizontal: 16, vertical: 34),
+              margin: EdgeInsets.symmetric(horizontal: 16, vertical: 80),
             );
             setState(() {
               value = newValue;
