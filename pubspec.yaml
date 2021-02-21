@@ -30,6 +30,7 @@ dependencies:
   marquee: ^1.6.1
   url_launcher: ^5.7.10
   lottie: ^0.7.0+1
+  bottom_navy_bar: ^5.6.0
 
 dev_dependencies:
   flutter_test:

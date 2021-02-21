@@ -1,8 +1,8 @@
+import 'package:aqi/pages/tab_page/tabs_page.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import '../../tab_page/tab_page.dart';
 import 'package:get/get.dart';
 
 buildAddressTextField({
@@ -70,7 +70,7 @@ buildAddressTextField({
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => TabPage(
+                      builder: (context) => TabsPage(
                         placeName: controller.text,
                       ),
                     ),

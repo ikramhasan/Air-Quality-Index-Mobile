@@ -1,4 +1,4 @@
-import 'package:aqi/pages/tab_page/tab_page.dart';
+import 'package:aqi/pages/tab_page/tabs_page.dart';
 import 'package:aqi/repositories/location_service.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -14,7 +14,7 @@ buildCurrentLocationButton(BuildContext context) {
         Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (context) => TabPage(
+            builder: (context) => TabsPage(
               location: location,
             ),
           ),

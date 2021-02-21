@@ -57,4 +57,17 @@ class Repository {
       );
     }
   }
+
+  Future<AirQualityIndex> getAQI({
+    String placeName,
+    String latitude,
+    String longitude,
+  }) async {
+    if (placeName.isEmpty) {
+      return await getDataFromLatLng(
+          latitude: latitude, longitude: longitude);
+    } else {
+      return await getDataFromPlaceName(placeName: placeName);
+    }
+  }
 }
