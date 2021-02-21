@@ -12,7 +12,7 @@ class LanguageWidget extends StatefulWidget {
 class _LanguageWidgetState extends State<LanguageWidget> {
   @override
   Widget build(BuildContext context) {
-    String value = context.locale.toString() == 'bn_BN' ? 'Bangla' : 'English';
+    String value = context.locale.toString() == 'bn_BN' ? 'বাংলা' : 'English';
     print(context.locale.toString());
     return settingsButton(
       title: 'Language',
@@ -24,7 +24,7 @@ class _LanguageWidgetState extends State<LanguageWidget> {
           elevation: 16,
           icon: Icon(Icons.arrow_drop_down_circle),
           isExpanded: true,
-          items: <String>['English', 'Bangla'].map((e) {
+          items: <String>['English', 'বাংলা'].map((e) {
             return DropdownMenuItem(
               value: e,
               child: Text(e),
@@ -37,9 +37,11 @@ class _LanguageWidgetState extends State<LanguageWidget> {
               context.locale = Locale('bn', 'BN');
             }
             Get.snackbar(
-                'Language Changed', 'Restart the app to see the change',
-                snackPosition: SnackPosition.BOTTOM,
-                margin: EdgeInsets.symmetric(horizontal: 16, vertical: 34),);
+              'Language Changed',
+              'Restart the app to see the change',
+              snackPosition: SnackPosition.BOTTOM,
+              margin: EdgeInsets.symmetric(horizontal: 16, vertical: 34),
+            );
             setState(() {
               value = newValue;
             });

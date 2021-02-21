@@ -6,6 +6,7 @@ import 'package:aqi/utils/launch_url.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:easy_localization/easy_localization.dart';
 
 class SettingsPage extends StatelessWidget {
   @override
@@ -15,7 +16,7 @@ class SettingsPage extends StatelessWidget {
       appBar: AppBar(
         leading: kBackButton(context),
         title: Text(
-          'Settings',
+          'settings'.tr(),
           style: Theme.of(context).appBarTheme.textTheme.headline1,
         ),
       ),
@@ -32,7 +33,7 @@ class SettingsPage extends StatelessWidget {
               Padding(
                 padding: EdgeInsets.only(left: 16.w),
                 child: Text(
-                  'Common',
+                  'common'.tr(),
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     color: Colors.blue,
@@ -47,7 +48,7 @@ class SettingsPage extends StatelessWidget {
               Padding(
                 padding: EdgeInsets.only(left: 16.w),
                 child: Text(
-                  'Misc',
+                  'misc'.tr(),
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     color: Colors.blue,
@@ -55,7 +56,7 @@ class SettingsPage extends StatelessWidget {
                 ),
               ),
               settingsButton(
-                title: 'Report a problem',
+                title: 'report_a_problem'.tr(),
                 leading: FaIcon(FontAwesomeIcons.exclamationTriangle),
                 trailing: FaIcon(FontAwesomeIcons.angleRight),
                 onTap: () {
@@ -64,7 +65,7 @@ class SettingsPage extends StatelessWidget {
               ),
               Divider(),
               settingsButton(
-                title: 'About me',
+                title: 'about_me'.tr(),
                 leading: FaIcon(FontAwesomeIcons.fileAlt),
                 trailing: FaIcon(FontAwesomeIcons.angleRight),
                 onTap: () {
@@ -73,14 +74,14 @@ class SettingsPage extends StatelessWidget {
               ),
               Divider(),
               settingsButton(
-                title: 'Licenses',
+                title: 'licenses'.tr(),
                 leading: FaIcon(FontAwesomeIcons.scroll),
                 trailing: FaIcon(FontAwesomeIcons.angleRight),
                 onTap: () {},
               ),
               Divider(),
               settingsButton(
-                title: 'More apps',
+                title: 'more_apps'.tr(),
                 leading: FaIcon(FontAwesomeIcons.googlePlay),
                 trailing: FaIcon(FontAwesomeIcons.angleRight),
                 onTap: () {
