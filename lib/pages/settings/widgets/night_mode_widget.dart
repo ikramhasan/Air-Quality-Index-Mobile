@@ -9,7 +9,7 @@ class NigthModeWidget extends StatefulWidget {
 }
 
 class _NigthModeWidgetState extends State<NigthModeWidget> {
-  bool switchValue = false;
+  bool switchValue = ThemeService().isDarkMode();
 
   @override
   Widget build(BuildContext context) {

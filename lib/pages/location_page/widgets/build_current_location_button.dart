@@ -28,28 +28,41 @@ buildCurrentLocationButton(BuildContext context) {
         color: Theme.of(context).cardColor,
         borderRadius: BorderRadius.circular(10),
       ),
-      child: Center(
-        child: Row(
-          children: [
-            Padding(
-              padding: EdgeInsets.all(10.h),
-              child: Icon(
-                Icons.place,
-                color: Colors.white,
-              ),
-            ),
-            SizedBox(width: 30.w),
-            Text(
-              'get_current_location'.tr(),
-              style: GoogleFonts.faunaOne(
-                fontWeight: FontWeight.bold,
-                fontSize: 16.h,
-                color: Colors.white,
-              ),
-            ),
-          ],
+      child: ListTile(
+        contentPadding: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+        title: Text(
+          'get_current_location'.tr(),
+          style: GoogleFonts.faunaOne(
+            fontWeight: FontWeight.bold,
+            fontSize: 16.h,
+            color: Colors.white,
+          ),
+        ),
+        leading: Icon(
+          Icons.place,
+          color: Colors.white,
         ),
       ),
+      // Row(
+      //   children: [
+      //     Padding(
+      //       padding: EdgeInsets.all(10.h),
+      //       child: Icon(
+      //         Icons.place,
+      //         color: Colors.white,
+      //       ),
+      //     ),
+      //     SizedBox(width: 30.w),
+      //     Text(
+      //       'get_current_location'.tr(),
+      //       style: GoogleFonts.faunaOne(
+      //         fontWeight: FontWeight.bold,
+      //         fontSize: 16.h,
+      //         color: Colors.white,
+      //       ),
+      //     ),
+      //   ],
+      // ),
     ),
   );
 }

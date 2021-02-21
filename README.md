@@ -101,7 +101,7 @@ After that, run these following commands:
 
     BSD Zero Clause License
 
-    Copyright © 2020 Codelessly
+    Copyright © 2021 ikramhasan
 
     Permission to use, copy, modify, and/or distribute this software for any
     purpose with or without fee is hereby granted.

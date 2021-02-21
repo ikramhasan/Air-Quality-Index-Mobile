@@ -29,6 +29,7 @@ dependencies:
   get_storage: ^1.4.0
   marquee: ^1.6.1
   url_launcher: ^5.7.10
+  lottie: ^0.7.0+1
 
 dev_dependencies:
   flutter_test:
@@ -40,5 +41,6 @@ flutter:
   assets:
     - assets/
     - assets/images/
+    - assets/lottie/
     - assets/lang/en-US.json
     - assets/lang/bn-BN.json

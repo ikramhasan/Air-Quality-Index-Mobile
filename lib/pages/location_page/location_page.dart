@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:easy_localization/easy_localization.dart';
+import 'package:lottie/lottie.dart';
 
 class LocationPage extends StatelessWidget {
   final _scaffoldKey = GlobalKey<ScaffoldState>();
@@ -30,7 +31,7 @@ class LocationPage extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       SizedBox(height: 60.h),
-                      Image.asset('assets/images/pollution.png'),
+                      Lottie.asset('assets/lottie/window-view.json'),
                       SizedBox(height: 60.h),
                       Text(
                         'where_are_you'.tr(),

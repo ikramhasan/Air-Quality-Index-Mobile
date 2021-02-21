@@ -77,7 +77,10 @@ class SettingsPage extends StatelessWidget {
                 title: 'licenses'.tr(),
                 leading: FaIcon(FontAwesomeIcons.scroll),
                 trailing: FaIcon(FontAwesomeIcons.angleRight),
-                onTap: () {},
+                onTap: () {
+                  launchURL(
+                      'https://github.com/Illumina/licenses/blob/master/Simplified-BSD-License.txt');
+                },
               ),
               Divider(),
               settingsButton(
