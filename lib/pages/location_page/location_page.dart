@@ -4,6 +4,7 @@ import 'package:aqi/pages/location_page/widgets/build_side_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:easy_localization/easy_localization.dart';
 
 class LocationPage extends StatelessWidget {
   final _scaffoldKey = GlobalKey<ScaffoldState>();
@@ -32,7 +33,7 @@ class LocationPage extends StatelessWidget {
                       Image.asset('assets/images/pollution.png'),
                       SizedBox(height: 60.h),
                       Text(
-                        'Where are you? ',
+                        'where_are_you'.tr(),
                         style: GoogleFonts.faunaOne(
                             color: Colors.black, fontSize: 24),
                       ),
@@ -46,7 +47,7 @@ class LocationPage extends StatelessWidget {
                       ),
                       SizedBox(height: 16.h),
                       Text(
-                        'To get the most accurate reading of your current air quality index, we recommend entering your exact location.',
+                        'enter_exact_location'.tr(),
                         style: GoogleFonts.faunaOne(color: Colors.grey),
                       ),
                     ],

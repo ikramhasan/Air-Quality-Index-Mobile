@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:location/location.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:easy_localization/easy_localization.dart';
 
 buildCurrentLocationButton(BuildContext context) {
   return InkWell(
@@ -39,7 +40,7 @@ buildCurrentLocationButton(BuildContext context) {
             ),
             SizedBox(width: 30.w),
             Text(
-              'Get Current Location',
+              'get_current_location'.tr(),
               style: GoogleFonts.faunaOne(
                 fontWeight: FontWeight.bold,
                 fontSize: 16.h,

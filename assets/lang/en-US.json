@@ -36,7 +36,14 @@
     "good_cautionary_statement" : "None.",
 
     "health_recommendations" : "Health Recommendations",
-    "home" : "Home"
+    "home" : "Home",
+
+    "where_are_you" : "Where are you? ",
+    "enter_exact_location" : "To get the most accurate reading of your current air quality index, we recommend entering your exact location.",
+
+    "aqi" : "AQI"
+
+
 
 
 

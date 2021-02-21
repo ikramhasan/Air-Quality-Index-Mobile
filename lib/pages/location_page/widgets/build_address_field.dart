@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../tab_page/tab_page.dart';
@@ -84,13 +85,7 @@ buildAddressTextField({
                 child: Center(
                   child: Padding(
                     padding: EdgeInsets.symmetric(horizontal: 26.w),
-                    child: Text(
-                      'GO',
-                      style: GoogleFonts.faunaOne(
-                        color: Colors.black,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
+                    child: FaIcon(FontAwesomeIcons.angleRight),
                   ),
                 ),
               ),
