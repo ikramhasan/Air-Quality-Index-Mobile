@@ -1,13 +1,15 @@
 import 'package:aqi/data/data.dart';
 import 'package:aqi/models/air_quality_index.dart';
+import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
 
 buildChart(
-    {String text, List<O3> list, String labelFormat, AirQualityIndex aqi}) {
+    {String text, List<O3> list, String labelFormat, AirQualityIndex aqi, BuildContext context}) {
   return SfCartesianChart(
     title: ChartTitle(text: text),
+    backgroundColor: Theme.of(context).primaryColor,
     primaryXAxis: NumericAxis(
       interval: 1,
       majorGridLines: MajorGridLines(width: 0),

@@ -43,26 +43,6 @@ buildCurrentLocationButton(BuildContext context) {
           color: Colors.white,
         ),
       ),
-      // Row(
-      //   children: [
-      //     Padding(
-      //       padding: EdgeInsets.all(10.h),
-      //       child: Icon(
-      //         Icons.place,
-      //         color: Colors.white,
-      //       ),
-      //     ),
-      //     SizedBox(width: 30.w),
-      //     Text(
-      //       'get_current_location'.tr(),
-      //       style: GoogleFonts.faunaOne(
-      //         fontWeight: FontWeight.bold,
-      //         fontSize: 16.h,
-      //         color: Colors.white,
-      //       ),
-      //     ),
-      //   ],
-      // ),
     ),
   );
 }

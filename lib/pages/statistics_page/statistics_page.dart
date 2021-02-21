@@ -36,8 +36,8 @@ class StatisticsPage extends StatelessWidget {
                     physics: BouncingScrollPhysics(),
                     child: Padding(
                       padding: EdgeInsets.symmetric(
-                        horizontal: 16.w,
                         vertical: 16.h,
+                        horizontal: 16.h,
                       ),
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.start,
@@ -48,24 +48,28 @@ class StatisticsPage extends StatelessWidget {
                             list: aqi.data.forecast.daily.o3,
                             labelFormat: '{value} ppb',
                             aqi: aqi,
+                            context: context,
                           ),
                           SizedBox(height: 16.h),
                           buildChart(
                               text: 'PM10',
                               list: aqi.data.forecast.daily.pm10,
                               aqi: aqi,
+                              context: context,
                               labelFormat: '{value} \nug/m3'),
                           SizedBox(height: 16.h),
                           buildChart(
                               text: 'PM25',
                               list: aqi.data.forecast.daily.pm25,
                               aqi: aqi,
+                              context: context,
                               labelFormat: '{value} \nug/m3'),
                           SizedBox(height: 16.h),
                           buildChart(
                               text: 'UVI',
                               list: aqi.data.forecast.daily.uvi,
                               aqi: aqi,
+                              context: context,
                               labelFormat: '{value} \nindex'),
                           SizedBox(height: 16.h),
                         ],
