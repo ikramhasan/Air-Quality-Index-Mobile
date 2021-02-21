@@ -1,9 +1,9 @@
-import 'package:aqi/pages/about_page/data/page_data.dart';
 import 'package:aqi/pages/about_page/widgets/build_expansion_card.dart';
 import 'package:aqi/pages/widgets/k_back_button.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:easy_localization/easy_localization.dart';
 
 class AboutPage extends StatelessWidget {
   @override
@@ -12,7 +12,7 @@ class AboutPage extends StatelessWidget {
       appBar: AppBar(
         leading: kBackButton(context),
         title: Text(
-          'About',
+          'about'.tr(),
           style: GoogleFonts.faunaOne(
             fontSize: 18.h,
             fontWeight: FontWeight.bold,
@@ -35,41 +35,41 @@ class AboutPage extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     buildExpansionCard(
-                      title: 'What is AQI?',
+                      title: 'what_is_aqi'.tr(),
                       assetLocation: 'assets/images/aqi.png',
-                      description: aqiText,
+                      description: 'aqi_description'.tr(),
                       context: context,
                     ),
                     SizedBox(height: 8.h),
                     buildExpansionCard(
-                        title: 'What is UVI?',
-                        description: uviText,
+                        title: 'what_is_uvi'.tr(),
+                        description: 'uvi_decription'.tr(),
                         context: context,
                         assetLocation: 'assets/images/uv.gif'),
                     SizedBox(height: 8.h),
                     buildExpansionCard(
-                      title: 'What is PM?',
-                      description: pmText,
+                      title: 'what_is_pm'.tr(),
+                      description: 'pm_description'.tr(),
                       context: context,
                     ),
                     SizedBox(height: 8.h),
                     buildExpansionCard(
-                      title: 'What is PM10?',
-                      description: pm10Text,
-                      context: context,
-                      assetLocation: 'assets/images/pm.jpg',
-                    ),
-                    SizedBox(height: 8.h),
-                    buildExpansionCard(
-                      title: 'What is PM25?',
-                      description: pm25Text,
+                      title: 'what_is_pm10'.tr(),
+                      description: 'pm10_description'.tr(),
                       context: context,
                       assetLocation: 'assets/images/pm.jpg',
                     ),
                     SizedBox(height: 8.h),
                     buildExpansionCard(
-                      title: 'Which of PM2.5 and PM10 is more harmful?',
-                      description: whichHarmful,
+                      title: 'what_is_pm25'.tr(),
+                      description: 'pm25_description'.tr(),
+                      context: context,
+                      assetLocation: 'assets/images/pm.jpg',
+                    ),
+                    SizedBox(height: 8.h),
+                    buildExpansionCard(
+                      title: 'which_harmful'.tr(),
+                      description: 'which_harmful_decription'.tr(),
                       context: context,
                       assetLocation: 'assets/images/comparison.jpg',
                     ),

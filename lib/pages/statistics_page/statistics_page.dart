@@ -5,6 +5,7 @@ import 'package:aqi/pages/widgets/loading.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:easy_localization/easy_localization.dart';
 
 class StatisticsPage extends StatelessWidget {
   final AirQualityIndex aqi;
@@ -20,7 +21,7 @@ class StatisticsPage extends StatelessWidget {
             appBar: AppBar(
               leading: kBackButton(context),
               title: Text(
-                'Statistics',
+                'statistics'.tr(),
                 style: GoogleFonts.faunaOne(
                   fontSize: 18.h,
                   fontWeight: FontWeight.bold,
