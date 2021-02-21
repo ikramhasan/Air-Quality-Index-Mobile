@@ -11,6 +11,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:marquee/marquee.dart';
 import 'widgets/build_circle_gauge.dart';
 import 'widgets/build_health_recommendation.dart';
+import 'package:easy_localization/easy_localization.dart';
 
 class HomePage extends StatefulWidget {
   final AirQualityIndex aqi;
@@ -30,7 +31,7 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         leading: kBackButton(context),
         title: Text(
-          'Home',
+          'home'.tr(),
           style: Theme.of(context).appBarTheme.textTheme.headline1,
         ),
       ),
@@ -108,7 +109,7 @@ class _HomePageState extends State<HomePage> {
                           ),
                           SizedBox(height: 16.h),
                           Text(
-                            'Health Recommendations',
+                            'health_recommendations'.tr(),
                             style: GoogleFonts.faunaOne(
                               fontSize: 18.h,
                               fontWeight: FontWeight.bold,
