@@ -7,6 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:persistent_bottom_nav_bar/persistent-tab-view.dart';
+import 'package:easy_localization/easy_localization.dart';
 
 List<Widget> buildScreens(AirQualityIndex aqi) {
   return [
@@ -26,27 +27,27 @@ List<PersistentBottomNavBarItem> navBarsItems(context) {
     PersistentBottomNavBarItem(
       textStyle: GoogleFonts.faunaOne(),
       icon: FaIcon(FontAwesomeIcons.home),
-      title: ("Home"),
+      title: ("home".tr()),
       activeColor: Colors.blue,
       inactiveColor: Theme.of(context).accentColor,
     ),
     PersistentBottomNavBarItem(
       icon: FaIcon(FontAwesomeIcons.chartBar),
-      title: ("Statistics"),
+      title: ("statistics".tr()),
       textStyle: GoogleFonts.faunaOne(),
       activeColor: Colors.blue,
       inactiveColor: Theme.of(context).accentColor,
     ),
     PersistentBottomNavBarItem(
       icon: FaIcon(FontAwesomeIcons.questionCircle),
-      title: ("About"),
+      title: ("about".tr()),
       textStyle: GoogleFonts.faunaOne(),
       activeColor: Colors.blue,
       inactiveColor: Theme.of(context).accentColor,
     ),
     PersistentBottomNavBarItem(
       icon: FaIcon(FontAwesomeIcons.cog),
-      title: ("Settings"),
+      title: ("settings".tr()),
       textStyle: GoogleFonts.faunaOne(),
       activeColor: Colors.blue,
       inactiveColor: Theme.of(context).accentColor,

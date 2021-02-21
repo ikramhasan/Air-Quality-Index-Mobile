@@ -41,11 +41,11 @@
     "where_are_you" : "Where are you? ",
     "enter_exact_location" : "To get the most accurate reading of your current air quality index, we recommend entering your exact location.",
 
-    "aqi" : "AQI"
+    "aqi" : "AQI",
 
-
-
-
+    "statistics" : "Statistics",
+    "about" : "About",
+    "settings" : "Settings"
 
 
 }
