@@ -45,6 +45,7 @@ See how the app works [here](https://youtu.be/uORQncuqnSI)
 - [x] Add about page
 - [x] Add persistant navbar
 - [x] Add expanded tiles
+- [x] Add multi laguage support
 - [x] Add dynamic theming (persistant)
 - [ ] Implement caching of data (Offline functionality)
 - [ ] Change the syncfusion graph package to flutter_graphs
