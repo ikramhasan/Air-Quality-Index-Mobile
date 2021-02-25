@@ -30,7 +30,7 @@ buildAddressTextField({
                   fontSize: 14,
                 ),
                 decoration: InputDecoration(
-                  hintText: 'Enter Address',
+                  hintText: 'Enter city',
                   contentPadding: EdgeInsets.all(8.h),
                   hintStyle: GoogleFonts.faunaOne(
                     color: Colors.grey,

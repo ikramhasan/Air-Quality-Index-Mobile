@@ -14,15 +14,19 @@
 | <img src="screenshots/intro.png" alt="drawing" width="270"/> | <img src="screenshots/home_1.png" alt="drawing" width="270"/> | <img src="screenshots/home_2.png" alt="drawing" width="270"/> |
 
 
-|                        Statistics Screen                         |                         About Screen 1                        |                      About Screen 2                       |
+|                        About Screen 1                         |                         About Screen 2                        |                      Settings Screen                       |
 | :---------------------------------------------------------------: | :-------------------------------------------------------------: | :--------------------------------------------------------------: |
-| <img src="screenshots/statistics.png" alt="drawing" width="270"/> | <img src="screenshots/about_1.png" alt="drawing" width="270"/> | <img src="screenshots/about_2.png" alt="drawing" width="270"/> |
+| <img src="screenshots/about_1.png" alt="drawing" width="270"/> | <img src="screenshots/about_2.png" alt="drawing" width="270"/> | <img src="screenshots/settings.png" alt="drawing" width="270"/> |
+
+|                         Dark Mode                      |                         Statistics Screen                        |                      Multilingual support                       |
+| :---------------------------------------------------------------: | :-------------------------------------------------------------: | :--------------------------------------------------------------: |
+| <img src="screenshots/home_night.png" alt="drawing" width="270"/> | <img src="screenshots/statistics.png" alt="drawing" width="270"/> | <img src="screenshots/about_multilingual.png" alt="drawing" width="270"/> |
 
 ## Description
 This app aims to help you check the air quality of your area and take necessary precausions. Check the quality of air surrounding you and get recommended health advice based on that. Made using flutter and the [waqi](https://waqi.info/) api.
 
 ## Demo
-### [Android App](https://drive.google.com/file/d/1uCLp-dDWwGQEKbUW1BSDhCxdUwPOuGp-/view?usp=sharing)
+### [Android App](https://drive.google.com/file/d/19pXcv4mxn-XlqRQR1AV1jDbVpSOHHG61/view?usp=sharing)
 
 An android fat application made using Flutter.
 
@@ -42,6 +46,7 @@ An android fat application made using Flutter.
 - [x] Add expanded tiles
 - [x] Add dynamic theming (persistant)
 - [ ] Implement caching of data (Offline functionality)
+- [ ] Change the syncfusion graph package to flutter_graphs
 - [ ] Implement better state management
 - [ ] Build the responsive site
 

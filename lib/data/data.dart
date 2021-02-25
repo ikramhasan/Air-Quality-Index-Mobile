@@ -46,7 +46,7 @@ List<Data> data = [
   Data(
     minAQI: 101,
     maxAQI: 150,
-    pollutionLevel: 'unhealthy_for_sensitive_groups'.tr(),
+    pollutionLevel: 'unhealthy_sensitive'.tr(),
     healthImplecations: 'unhealthy_sensitive_health_implications'.tr(),
     cautionaryStatement: 'unhealthy_sensitive_cautionary_statement'.tr(),
     icon: 'assets/unhealthy-sensitive.svg',
