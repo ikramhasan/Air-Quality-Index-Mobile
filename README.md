@@ -26,9 +26,10 @@
 This app aims to help you check the air quality of your area and take necessary precausions. Check the quality of air surrounding you and get recommended health advice based on that. Made using flutter and the [waqi](https://waqi.info/) api.
 
 ## Demo
-### [Android App](https://drive.google.com/file/d/19pXcv4mxn-XlqRQR1AV1jDbVpSOHHG61/view?usp=sharing)
+Download the fat android apk from [Google Drive](https://drive.google.com/file/d/19pXcv4mxn-XlqRQR1AV1jDbVpSOHHG61/view?usp=sharing) or [GitHub Releases](https://github.com/ikramhasan/Air-Quality-Index-Mobile/releases/)
 
-An android fat application made using Flutter.
+
+See how the app works [here](https://youtu.be/uORQncuqnSI)
 
 (Website in development)
 
